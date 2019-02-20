@@ -1,0 +1,41 @@
+.ComLoading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 50vh;
+
+  > .content {
+    @w: 240px;
+    width: @w;
+    height: @w;
+    margin: -@w / 2 auto 0;
+    padding: 40px 10px 0;
+    text-align: center;
+    font-size: 30px;
+    color: #e9e9e9;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 15px;
+
+    > .img {
+      @bgImg-w: @w / 2.5;
+      display: block;
+      width: @bgImg-w;
+      height: @bgImg-w;
+      margin: 0 auto 20px;
+      animation: weuiLoading 1s steps(12, end) infinite;
+    }
+  }
+}
+
+
+@keyframes weuiLoading {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
